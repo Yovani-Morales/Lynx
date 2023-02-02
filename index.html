@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome icons -->
+    <script src="https://kit.fontawesome.com/bee1edc4ba.js" crossorigin="anonymous"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Lynx</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="img/logo-lynx.png" alt="logo Lynx" class="logo__img">
+        </div>
+
+        <div class="action">
+            <button class="action__btn-create-task all-button" id="btn-create"><i class="fa-solid fa-file-circle-plus"></i> Crear tarea</button>
+
+            <div class="action__filters">
+                <h3 class="action__filters-title">Filtros</h3>
+
+                <input type="radio" name="task" id="all" checked class="action__filters-input">
+                <label for="all">Todo</label>
+
+                <input type="radio" name="task" id="completed" class="action__filters-input">
+                <label for="completed">Completado</label>
+
+                <input type="radio" name="task" id="incomplete" class="action__filters-input">
+                <label for="all">Incompleto</label>
+            </div>
+            
+            <form>
+                <div class="action__input-container">
+                    <span class="action__input-span"><i class="fa-solid fa-magnifying-glass icon"></i></span>
+                    <input type="search" placeholder="Buscar tarea" class="action__input-search">
+                </div>
+
+                <input type="submit" value="Buscar" class="action__btn-submit all-button">
+            </form>
+        </div>
+
+        <div class="mode-change">
+            <button class="mode-change__btn" id="btn-mode-change">
+                <span class="mode-change__span"><i class="fa-solid fa-sun"></i></span>
+                <span class="mode-change__span"><i class="fa-solid fa-moon"></i></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-table">
+            <h1 class="container-table__title">Lista de tareas</h1>
+
+            <table class="table" id="table">
+                <tr>
+                    <th class="table__subtitle">Nº</th>
+                    <th class="table__subtitle">Titulo</th>
+                    <th class="table__subtitle">Descripción</th>
+                    <th class="table__subtitle">Fecha de creación</th>
+                    <th class="table__subtitle">Fecha de finalización</th>
+                    <th class="table__subtitle">Completado</th>
+                    <th class="table__subtitle">Acciones</th>
+                </tr>
+                
+                <tr>
+                    <td class="table__data">1</td>
+                    <td class="table__data">GIT</td>
+                    <td class="table__data">Aprender git...</td>
+                    <td class="table__data">25/01/2023</td>
+                    <td class="table__data">26/02/2023</td>
+                    <td class="table__data"><input type="checkbox" id="checkbox"></td>
+                    <td class="table__data">
+                        <button class="all-button table__btn-read" id="btn-read"><i class="fa-solid fa-book-open"></i> Leer</button>
+                        <button class="all-button table__btn-update" id="btn-update"><i class="fa-solid fa-arrow-rotate-right"></i> Actualizar</button>
+                        <button class="all-button table__btn-delete" id="btn-delete"><i class="fa-solid fa-trash"></i> Borrar</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="table__data">2</td>
+                    <td class="table__data">Algoritmos</td>
+                    <td class="table__data">Realizar...</td>
+                    <td class="table__data">25/01/2023</td>
+                    <td class="table__data">No terminado</td>
+                    <td class="table__data"><input type="checkbox"></td>
+                    <td class="table__data">
+                        <button class="all-button table__btn-read" id="btn-read"><i class="fa-solid fa-book-open"></i> Leer</button>
+                        <button class="all-button table__btn-update" id="btn-update"><i class="fa-solid fa-arrow-rotate-right"></i> Actualizar</button>
+                        <button class="all-button table__btn-delete" id="btn-delete"><i class="fa-solid fa-trash"></i> Borrar</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="table__data">3</td>
+                    <td class="table__data">Bash</td>
+                    <td class="table__data">Terminar la...</td>
+                    <td class="table__data">25/01/2023</td>
+                    <td class="table__data">No terminado</td>
+                    <td class="table__data"><input type="checkbox"></td>
+                    <td class="table__data">
+                        <button class="all-button table__btn-read" id="btn-read"><i class="fa-solid fa-book-open"></i> Leer</button>
+                        <button class="all-button table__btn-update" id="btn-update"><i class="fa-solid fa-arrow-rotate-right"></i> Actualizar</button>
+                        <button class="all-button table__btn-delete" id="btn-delete"><i class="fa-solid fa-trash"></i> Borrar</button>
+                    </td>
+                </tr>                
+            </table>
+        </div>
+    </main>
+    
+</body>
+</html>

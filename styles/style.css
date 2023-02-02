@@ -1,0 +1,287 @@
+:root {
+    --color-buttons: #1a73e8;
+    --color-shadow-buttons: #1b66c9;
+    --orange: #ff6b01;
+    --white: #FEFEFE;
+    --white-secound: #F1F1F1;
+    --black: #111111;
+    --shadow-in-light-mode: rgba(32, 33, 36, .28);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    transition: .3s ease all;
+    background-color: var(--white-secound);
+}
+
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.header {
+    width: 90%;
+    height: 80px;
+    margin: 50px auto 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    box-shadow: 0 1px 6px var(--shadow-in-light-mode);
+}
+
+
+/* All Button */
+/* Styles for button-create, button-read, button-update, button-delete and button-search. */
+.all-button {
+    height: 35px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 1000px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: var(--color-buttons);
+    color: var(--white-secound);
+}
+
+.all-button:hover {
+    background: #1b66c9;
+    box-shadow: 0 1px 3px 1px rgba(66,64,67,.15), 0 1px 2px 0 rgba(60,64,67,.3);
+}
+
+.all-button:active {
+    background: #185bb3;
+}
+
+
+/* Logo... */
+.logo {
+    height: 100%;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo__img {
+    width: 100px;
+}
+
+
+/* Action */
+.action {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Button Create */
+/* Styles in line 44 */
+
+
+/* Filters... */
+.action__filters {
+    display: flex;
+    align-items: center;
+}
+
+.action__filters-title {
+    font-size: 19px;
+    margin-right: 10px;
+    color: #34a853;
+}
+
+.action__filters-input {
+    font-size: 15px;
+    margin: 0 5px;
+}
+
+
+/* Styles for the search engine */
+.action__input-container {
+    display: inline-block;
+    position: relative;
+}
+
+.action__input-span {
+    width: 50px;
+    height: 35px;
+    font-size: 13px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    color: #9aa0a6;
+}
+
+.action__input-search {
+    height: 35px;
+    padding: 0 20px 0 50px;
+    border: 1px solid #dfe1e5;
+    border-radius: 1000px;
+    outline: none;
+    background-color: transparent;
+}
+
+.action__input-search:hover {
+    box-shadow: 0 1px 6px var(--shadow-in-light-mode);
+}
+
+.action__input-search::placeholder {
+    color: #868c91;
+}
+
+.action__btn-submit {
+    margin-left: 10px;
+}
+
+/* Button Search */
+/* Styles in line 44 */
+
+
+/* Styles for mode change button */
+.mode-change {
+    margin-right: 20px;
+}
+
+.mode-change__btn {
+    border-radius: 1000px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    background-color: var(--black);
+}
+
+.mode-change__btn.active {
+    background-color: var(--orange);
+}
+
+.mode-change__btn::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: unset;
+    background-color: var(--white-secound);
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+    transition: .3s ease all;
+}
+
+.mode-change__btn.active::after {
+    left: unset;
+    right: 0;
+}
+
+.mode-change__span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: none;
+    color: var(--white-secound);
+}
+
+.fa-sun, .fa-moon {
+    font-size: 19px;
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+
+.container-table {
+    width: 90%;
+    margin: 100px auto 0;
+}
+
+.container-table__title {
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--color-buttons);
+}
+
+
+/* Table */
+.table {
+    margin: 30px auto 0;
+    border-collapse: collapse;
+    background-color: var(--white);
+    box-shadow: 0 1px 6px var(--shadow-in-light-mode);
+}
+
+.table__subtitle {
+    font-size: 19px;
+    color: var(--black);
+    background-color: #dfe1e5;
+}
+
+.table__subtitle, .table__data {
+    text-align: center;
+    padding: 15px 15px;
+    border: 1px solid #dfe1e5;
+}
+
+.table__data {
+    font-size: 15px;
+}
+
+
+/* Buttons Read/Update/Delete */
+.table__btn-read {
+    background-color: #34a853;
+    margin-right: 10px;
+}
+
+.table__btn-read:hover {
+    background-color: #2f974b;
+
+}
+
+.table__btn-read:active {
+    background-color: #288140;
+}
+
+
+/* Button update styles in line 44 */
+.table__btn-update {
+    margin-right: 10px;
+}
+
+
+.table__btn-delete {
+    background-color: #ea4335;
+}
+
+.table__btn-delete:hover {
+    background-color: #c93a2d;
+}
+
+.table__btn-delete:active {
+    background-color: #ad3328;
+}
