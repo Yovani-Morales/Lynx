@@ -1,6 +1,6 @@
 :root {
-    --color-buttons: #1a73e8;
-    --color-shadow-buttons: #1b66c9;
+    --blue: #1a73e8;
+    --dark-blue: #1b66c9;
     --orange: #ff6b01;
     --white: #FEFEFE;
     --white-secound: #F1F1F1;
@@ -12,10 +12,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
     transition: .3s ease all;
     background-color: var(--white-secound);
 }
@@ -39,9 +39,9 @@ body {
 }
 
 
-/* All Button */
+/* Button (default styles) */
 /* Styles for button-create, button-read, button-update, button-delete and button-search. */
-.all-button {
+.button {
     height: 35px;
     padding: 0 20px;
     border: none;
@@ -49,16 +49,16 @@ body {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    background-color: var(--color-buttons);
-    color: var(--white-secound);
+    background-color: var(--blue);
+    color: var(--white);
 }
 
-.all-button:hover {
-    background: #1b66c9;
+.button:hover {
+    background: var(--dark-blue);
     box-shadow: 0 1px 3px 1px rgba(66,64,67,.15), 0 1px 2px 0 rgba(60,64,67,.3);
 }
 
-.all-button:active {
+.button:active {
     background: #185bb3;
 }
 
@@ -210,7 +210,6 @@ body {
 
 
 
-
 /*--------------------------------------------------------------
 # Main
 --------------------------------------------------------------*/
@@ -223,7 +222,7 @@ body {
 .container-table__title {
     font-size: 2.5em;
     text-align: center;
-    color: var(--color-buttons);
+    color: var(--blue);
 }
 
 
