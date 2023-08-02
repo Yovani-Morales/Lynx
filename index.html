@@ -15,6 +15,57 @@
     <title>Lynx</title>
 </head>
 <body>
+    <div class="modal">
+        <div class="modal__container">
+            <div class="modal__toolbar">
+                <div class="modal__container-icons">
+                    <i class="modal__icon fa-solid fa-circle"></i>
+                    <i class="modal__icon fa-solid fa-circle"></i>
+                    <i class="modal__icon fa-solid fa-circle"></i>
+                </div>
+                <i class="modal__icon modal__icon--size fa-solid fa-xmark"></i>
+            </div>
+
+            <div class="modal__content">
+                <h2 class="modal__title">Nueva tarea</h2>
+                <div class="modal__container-input">
+                    <input class="modal__input" type="text" placeholder="Titulo">
+                    <textarea class="modal__input modal__input-textarea" cols="50" rows="5" placeholder="descripción"></textarea>
+                    <label>
+                        <input type="checkbox">
+                        Completado
+                    </label>
+                    <div class="modal__message">Titulo y descripción requerido</div>
+                </div>
+                <div class="modal__container-buttons">
+                    <button class="button button-red">Cancelar</button>
+                    <button class="button button-green">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-read">
+        <div class="modal__container">
+            <div class="modal__toolbar">
+                <div class="modal__container-icons">
+                    <i class="modal__icon fa-solid fa-circle"></i>
+                    <i class="modal__icon fa-solid fa-circle"></i>
+                    <i class="modal__icon fa-solid fa-circle"></i>
+                </div>
+                <i class="modal__icon modal__icon--size fa-solid fa-xmark"></i>
+            </div>
+
+            <div class="modal__content modal-read__content">
+                <h2 class="modal__title">Realizar 2 proyectos con Bootstrap</h2>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quisquam doloribus corrupti qui voluptatum unde quasi iure sed reiciendis similique maxime animi, ad pariatur obcaecati excepturi, aperiam omnis aut fugit.</div>
+                <div class="modal__container-buttons">
+                    <button class="button button-red">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="header">
         <div class="logo">
             <img src="img/logo-lynx.png" alt="logo Lynx" class="logo__img">
@@ -77,9 +128,9 @@
                     <td class="table__data">26/02/2023</td>
                     <td class="table__data"><input type="checkbox" id="checkbox"></td>
                     <td class="table__data">
-                        <button class="button table__btn-read" id="btn-read"><i class="fa-solid fa-book-open"></i> Leer</button>
+                        <button class="button button-green table__btn-read" id="btn-read"><i class="fa-solid fa-book-open"></i> Leer</button>
                         <button class="button table__btn-update" id="btn-update"><i class="fa-solid fa-arrow-rotate-right"></i> Actualizar</button>
-                        <button class="button table__btn-delete" id="btn-delete"><i class="fa-solid fa-trash"></i> Borrar</button>
+                        <button class="button button-red table__btn-delete" id="btn-delete"><i class="fa-solid fa-trash"></i> Borrar</button>
                     </td>
                 </tr>
 
@@ -91,9 +142,9 @@
                     <td class="table__data">No terminado</td>
                     <td class="table__data"><input type="checkbox"></td>
                     <td class="table__data">
-                        <button class="button table__btn-read" id="btn-read"><i class="fa-solid fa-book-open"></i> Leer</button>
+                        <button class="button button-green table__btn-read" id="btn-read"><i class="fa-solid fa-book-open"></i> Leer</button>
                         <button class="button table__btn-update" id="btn-update"><i class="fa-solid fa-arrow-rotate-right"></i> Actualizar</button>
-                        <button class="button table__btn-delete" id="btn-delete"><i class="fa-solid fa-trash"></i> Borrar</button>
+                        <button class="button button-red table__btn-delete" id="btn-delete"><i class="fa-solid fa-trash"></i> Borrar</button>
                     </td>
                 </tr>
 
@@ -105,9 +156,9 @@
                     <td class="table__data">No terminado</td>
                     <td class="table__data"><input type="checkbox"></td>
                     <td class="table__data">
-                        <button class="button table__btn-read" id="btn-read"><i class="fa-solid fa-book-open"></i> Leer</button>
+                        <button class="button button-green table__btn-read" id="btn-read"><i class="fa-solid fa-book-open"></i> Leer</button>
                         <button class="button table__btn-update" id="btn-update"><i class="fa-solid fa-arrow-rotate-right"></i> Actualizar</button>
-                        <button class="button table__btn-delete" id="btn-delete"><i class="fa-solid fa-trash"></i> Borrar</button>
+                        <button class="button button-red table__btn-delete" id="btn-delete"><i class="fa-solid fa-trash"></i> Borrar</button>
                     </td>
                 </tr>                
             </table>

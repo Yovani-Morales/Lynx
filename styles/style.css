@@ -39,7 +39,7 @@ body {
 }
 
 
-/* Button (default styles) */
+/* Buttons */
 /* Styles for button-create, button-read, button-update, button-delete and button-search. */
 .button {
     height: 35px;
@@ -60,6 +60,30 @@ body {
 
 .button:active {
     background: #185bb3;
+}
+
+.button-green {
+    background-color: #34a853;
+}
+
+.button-green:hover {
+    background-color: #2f974b;
+}
+
+.button-green:active {
+    background-color: #288140;
+}
+
+.button-red {
+    background-color: #ea4335;
+}
+
+.button-red:hover {
+    background-color: #c93a2d;
+}
+
+.button-red:active {
+    background-color: #ad3328;
 }
 
 
@@ -83,10 +107,6 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
-
-/* Button Create */
-/* Styles in line 44 */
 
 
 /* Filters... */
@@ -149,9 +169,6 @@ body {
 .action__btn-submit {
     margin-left: 10px;
 }
-
-/* Button Search */
-/* Styles in line 44 */
 
 
 /* Styles for mode change button */
@@ -253,34 +270,127 @@ body {
 
 /* Buttons Read/Update/Delete */
 .table__btn-read {
-    background-color: #34a853;
     margin-right: 10px;
 }
 
-.table__btn-read:hover {
-    background-color: #2f974b;
-
-}
-
-.table__btn-read:active {
-    background-color: #288140;
-}
-
-
-/* Button update styles in line 44 */
 .table__btn-update {
     margin-right: 10px;
 }
 
 
-.table__btn-delete {
+
+/*--------------------------------------------------------------
+# Modal
+--------------------------------------------------------------*/
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .6);
+    display: none;
+}
+
+.modal__container {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.modal__toolbar {
+    height: 35px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #212121;
+}
+
+.modal__container-icons {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.modal__icon {
+    font-size: 8px;
+    color: var(--white);
+}
+
+.modal__icon--size {
+    font-size: 18px;
+}
+
+.modal__icon--size:hover {
+    cursor: pointer;
+}
+
+.modal__content {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border: 5px solid #212121;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--white-secound);
+}
+
+.modal__title {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--blue);
+}
+
+.modal__container-input {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal__input {
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #dfe1e5;
+    background-color: transparent;
+}
+
+.modal__input:focus {
+    outline: none;
+}
+
+.modal__input-textarea {
+    resize: none;
+}
+
+.modal__message {
+    display: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--white);
     background-color: #ea4335;
 }
 
-.table__btn-delete:hover {
-    background-color: #c93a2d;
+.modal__container-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
 }
 
-.table__btn-delete:active {
-    background-color: #ad3328;
+
+
+/* Modal READ */
+.modal-read.open {
+    display: flex;
+}
+
+.modal-read__content {
+    width: 500px;
 }
