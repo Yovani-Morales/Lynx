@@ -38,8 +38,8 @@
                     <div class="modal__message">Titulo y descripción requerido</div>
                 </div>
                 <div class="modal__container-buttons">
-                    <button class="button button-red">Cancelar</button>
-                    <button class="button button-green">Aceptar</button>
+                    <button class="button button--red">Cancelar</button>
+                    <button class="button button--green">Aceptar</button>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
                 <h2 class="modal__title">Realizar 2 proyectos con Bootstrap</h2>
                 <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quisquam doloribus corrupti qui voluptatum unde quasi iure sed reiciendis similique maxime animi, ad pariatur obcaecati excepturi, aperiam omnis aut fugit.</div>
                 <div class="modal__container-buttons">
-                    <button class="button button-red">Cerrar</button>
+                    <button class="button button--red">Cerrar</button>
                 </div>
             </div>
         </div>
@@ -84,10 +84,10 @@
                 <label for="completed">Completado</label>
 
                 <input type="radio" name="task" id="incomplete" class="action__filters-input">
-                <label for="all">Incompleto</label>
+                <label for="incomplete">Incompleto</label>
             </div>
             
-            <form>
+            <form class="action__form">
                 <div class="action__input-container">
                     <span class="action__input-span"><i class="fa-solid fa-magnifying-glass icon"></i></span>
                     <input type="search" placeholder="Buscar palabra" class="action__input-search">
@@ -103,6 +103,50 @@
                 <span class="mode-change__span"><i class="fa-solid fa-moon"></i></span>
             </button>
         </div>
+
+        <div class="mobile-search">
+            <i class="fa-solid fa-magnifying-glass icon"></i>
+            <div class="mobile-search__container">
+                <div class="mobile-search__content">
+                    <i class="fa-solid fa-magnifying-glass icon icon-cursor"></i>
+                    <input class="mobile-search__input" type="text" placeholder="Buscar palabra">
+                    <button class="button">Buscar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-menu">
+            <i class="fa-solid fa-bars icon"></i>
+            <div class="mobile-menu__container">
+                <div class="mobile-menu__content">
+                    <div class="mobile-menu__item mobile-menu__item--right">
+                        <i class="mobile-menu__close fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="mobile-menu__item">
+                        <h3 class="mobile-menu__title">Filtros</h3>
+                        <label class="mobile-menu__label">
+                            <input type="radio" name="task" checked>
+                            Todo
+                        </label>
+                        <label class="mobile-menu__label">
+                            <input type="radio" name="task">
+                            Completado
+                        </label>
+                        <label class="mobile-menu__label">
+                            <input type="radio" name="task">
+                            Incompleto
+                        </label>            
+                    </div>
+                    <div class="mobile-menu__item mobile-menu__item--flex">
+                        <h3 class="mobile-menu__title">Modo oscuro</h3>
+                        <button class="mode-change__btn" id="btn-mode-change">
+                            <span class="mode-change__span"><i class="fa-solid fa-sun"></i></span>
+                            <span class="mode-change__span"><i class="fa-solid fa-moon"></i></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -117,7 +161,7 @@
                     <th class="table__subtitle">Fecha de creación</th>
                     <th class="table__subtitle">Fecha de finalización</th>
                     <th class="table__subtitle">Completado</th>
-                    <th class="table__subtitle">Acciones</th>
+                    <th class="table__subtitle">Acción</th>
                 </tr>
                 
                 <tr>
@@ -128,9 +172,9 @@
                     <td class="table__data">26/02/2023</td>
                     <td class="table__data"><input type="checkbox" id="checkbox"></td>
                     <td class="table__data">
-                        <button class="button button-green table__btn-read" id="btn-read"><i class="fa-solid fa-book-open"></i> Leer</button>
+                        <button class="button button--green table__btn-read" id="btn-read"><i class="fa-solid fa-book-open"></i> Leer</button>
                         <button class="button table__btn-update" id="btn-update"><i class="fa-solid fa-arrow-rotate-right"></i> Actualizar</button>
-                        <button class="button button-red table__btn-delete" id="btn-delete"><i class="fa-solid fa-trash"></i> Borrar</button>
+                        <button class="button button--red table__btn-delete" id="btn-delete"><i class="fa-solid fa-trash"></i> Borrar</button>
                     </td>
                 </tr>
 
@@ -142,9 +186,9 @@
                     <td class="table__data">No terminado</td>
                     <td class="table__data"><input type="checkbox"></td>
                     <td class="table__data">
-                        <button class="button button-green table__btn-read" id="btn-read"><i class="fa-solid fa-book-open"></i> Leer</button>
+                        <button class="button button--green table__btn-read" id="btn-read"><i class="fa-solid fa-book-open"></i> Leer</button>
                         <button class="button table__btn-update" id="btn-update"><i class="fa-solid fa-arrow-rotate-right"></i> Actualizar</button>
-                        <button class="button button-red table__btn-delete" id="btn-delete"><i class="fa-solid fa-trash"></i> Borrar</button>
+                        <button class="button button--red table__btn-delete" id="btn-delete"><i class="fa-solid fa-trash"></i> Borrar</button>
                     </td>
                 </tr>
 
@@ -156,12 +200,103 @@
                     <td class="table__data">No terminado</td>
                     <td class="table__data"><input type="checkbox"></td>
                     <td class="table__data">
-                        <button class="button button-green table__btn-read" id="btn-read"><i class="fa-solid fa-book-open"></i> Leer</button>
+                        <button class="button button--green table__btn-read" id="btn-read"><i class="fa-solid fa-book-open"></i> Leer</button>
                         <button class="button table__btn-update" id="btn-update"><i class="fa-solid fa-arrow-rotate-right"></i> Actualizar</button>
-                        <button class="button button-red table__btn-delete" id="btn-delete"><i class="fa-solid fa-trash"></i> Borrar</button>
+                        <button class="button button--red table__btn-delete" id="btn-delete"><i class="fa-solid fa-trash"></i> Borrar</button>
                     </td>
                 </tr>                
             </table>
+
+            <div class="mobile-table">
+                <div class="mobile-table__item">
+                    <div class="mobile-table__header">
+                        <div class="mobile-table__btn">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-table__header-title">
+                            <div>Titulo</div>
+                            <div>Aprender git</div>
+                        </div>
+                    </div>
+                    <div class="mobile-table__collapsible-content">
+                        <div class="mobile-table__collapsible-item">
+                            <p>Completado</p>
+                            <input type="checkbox">
+                        </div>
+                        <div class="mobile-table__collapsible-item">
+                            <p>Descripción</p>
+                            <p>Seguir practicando c...</p>
+                        </div>
+                        <div class="mobile-table__collapsible-item mobile-table__collapsible-item--center">
+                            <p>Acción</p>
+                            <div>
+                                <button class="button button-circle button--green"><i class="fa-solid fa-book-open"></i></button>
+                                <button class="button button-circle"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+                                <button class="button button-circle button--red"><i class="fa-solid fa-trash"></i></button>        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-table__item">
+                    <div class="mobile-table__header">
+                        <div class="mobile-table__btn">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-table__header-title">
+                            <div>Titulo</div>
+                            <div>Aprender git</div>
+                        </div>
+                    </div>
+                    <div class="mobile-table__collapsible-content">
+                        <div class="mobile-table__collapsible-item">
+                            <p>Completado</p>
+                            <input type="checkbox">
+                        </div>
+                        <div class="mobile-table__collapsible-item">
+                            <p>Descripción</p>
+                            <p>Seguir practicando c...</p>
+                        </div>
+                        <div class="mobile-table__collapsible-item mobile-table__collapsible-item--center">
+                            <p>Acción</p>
+                            <div>
+                                <button class="button button-circle button--green"><i class="fa-solid fa-book-open"></i></button>
+                                <button class="button button-circle"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+                                <button class="button button-circle button--red"><i class="fa-solid fa-trash"></i></button>        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-table__item">
+                    <div class="mobile-table__header">
+                        <div class="mobile-table__btn">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-table__header-title">
+                            <div>Titulo</div>
+                            <div>Aprender git</div>
+                        </div>
+                    </div>
+                    <div class="mobile-table__collapsible-content">
+                        <div class="mobile-table__collapsible-item">
+                            <p>Completado</p>
+                            <input type="checkbox">
+                        </div>
+                        <div class="mobile-table__collapsible-item">
+                            <p>Descripción</p>
+                            <p>Seguir practicando c...</p>
+                        </div>
+                        <div class="mobile-table__collapsible-item mobile-table__collapsible-item--center">
+                            <p>Acción</p>
+                            <div>
+                                <button class="button button-circle button--green"><i class="fa-solid fa-book-open"></i></button>
+                                <button class="button button-circle"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+                                <button class="button button-circle button--red"><i class="fa-solid fa-trash"></i></button>        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-table__all-taks">23 tareas</div>
+            </div>
         </div>
     </main>
     
